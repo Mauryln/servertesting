@@ -8,7 +8,7 @@ const path = require('path');
 const cors = require('cors');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 // --- Configuración ---
 // Habilita CORS para permitir peticiones desde la extensión Chrome
@@ -659,6 +659,6 @@ app.get('/reports/:userId/:labelId/messages', async (req, res) => {
 });
 
 // --- Inicio del Servidor ---
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
     console.log(`WhatsApp Automator Server listening at http://localhost:${port}`);
 });
